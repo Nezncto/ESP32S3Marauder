@@ -7,11 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build
-        run: |
-          # Переходим в папку с кодом
-          cd ESP32S3Marauder-master/esp32s3_marauder/
-          # Проверяем, есть ли там platformio.ini
-          ls -la
-          # Запускаем сборку именно там
-          pio run
+      - name: Locate platformio.ini
+        run: find . -name "platformio.ini"
