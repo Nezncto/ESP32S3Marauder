@@ -14,4 +14,7 @@ jobs:
       - name: Install PlatformIO
         run: pip install -U platformio
       - name: Run PlatformIO Build
-        run: find . -name "platformio.ini"
+        run: |
+         ls -F
+         ls -F ESP32S3Marauder-master/
+         pio run -d ESP32S3Marauder-master/
