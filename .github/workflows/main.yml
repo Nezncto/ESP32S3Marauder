@@ -7,11 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-      - name: Install PlatformIO
-        run: pip install -U platformio
-      - name: Run PlatformIO Build
-        run: pio run -d ESP32S3Marauder-master/
+      - name: List files
+        run: ls -R
